@@ -32,8 +32,8 @@ A high-performance, visually stunning front-end clone of the Amazon website. Thi
 - `sell.html`: The Seller Portal with listing forms and auth protection.
 - `cart.html`: Comprehensive shopping cart with quantity management.
 - `login.html`: Modern sign-in page with mock authentication logic.
-- `css/styles_v3.css`: The core design system and shared styles.
-- `js/products_v3.js`: Core logic for product rendering, cart management, and notifications.
+- `css/styles_v4.css`: The core design system and shared styles.
+- `js/products_v4.js`: Core logic for product rendering, cart management, and notifications.
 
 ## 🏃 How to Run
 1. Simply run the provided `run.bat` file in the root directory.
