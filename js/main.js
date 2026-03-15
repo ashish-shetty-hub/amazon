@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Function to update cart count in the header
+// Function to update cart count adding total quantity
 function updateCartCount() {
     const cartCount = document.querySelector('.cart-number');
     if (!cartCount) return;
@@ -58,8 +58,11 @@ function updateCartCount() {
     // Get cart items from localStorage
     let cart = JSON.parse(localStorage.getItem('amazonCart')) || [];
     
+    // Calculate total quantity across all items
+    const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+    
     // Update the cart count display
-    cartCount.textContent = cart.length;
+    cartCount.textContent = totalQuantity;
 }
 
 // Local storage helpers for cart functionality
@@ -92,8 +95,20 @@ function addToCart(product) {
     // Update the cart count in the header
     updateCartCount();
     
-    // Show a confirmation message
-    alert('Item added to your cart!');
+    // Show a toast message
+    showToast(`${product.title} added to cart!`);
+}
+
+function showToast(message) {
+    let toast = document.querySelector('.toast');
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.className = 'toast';
+        document.body.appendChild(toast);
+    }
+    toast.innerHTML = `<i class="fa-solid fa-circle-check"></i> ${message}`;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 3000);
 }
 
 function saveForLater(product) {

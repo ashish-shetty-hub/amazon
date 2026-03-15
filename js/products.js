@@ -1,6 +1,7 @@
 // Products page JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('PRODUCTS.JS LOADED - VERSION 3 - NO ALERTS');
     // Update cart count from localStorage
     updateCartCount();
     
@@ -35,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Function to update cart count in the header
+// Function to update cart count adding total quantity
 function updateCartCount() {
     const cartCount = document.querySelector('.cart-number');
     if (!cartCount) return;
@@ -43,8 +44,11 @@ function updateCartCount() {
     // Get cart items from localStorage
     let cart = JSON.parse(localStorage.getItem('amazonCart')) || [];
     
+    // Calculate total quantity across all items
+    const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+    
     // Update the cart count display
-    cartCount.textContent = cart.length;
+    cartCount.textContent = totalQuantity;
 }
 
 // Function to load products
@@ -115,7 +119,7 @@ function createProductCard(product) {
     const saveForLaterBtn = card.querySelector('.save-for-later');
     
     addToCartBtn.addEventListener('click', function() {
-        addProductToCart(product);
+        addProductToCartCore(product);
     });
     
     saveForLaterBtn.addEventListener('click', function() {
@@ -125,8 +129,8 @@ function createProductCard(product) {
     return card;
 }
 
-// Function to add a product to cart
-function addProductToCart(product) {
+// Function to add a product to cart (core logic)
+function addProductToCartCore(product) {
     let cart = JSON.parse(localStorage.getItem('amazonCart')) || [];
     
     // Check if product already exists in cart
@@ -147,8 +151,26 @@ function addProductToCart(product) {
     // Update the cart count in the header
     updateCartCount();
     
-    // Show a confirmation message
-    alert('Item added to your cart!');
+    // Show a toast message
+    showToast(`${product.title} added to cart!`);
+}
+
+// Function to show toast notification
+function showToast(message) {
+    // Create toast element if it doesn't exist
+    let toast = document.querySelector('.toast');
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.className = 'toast';
+        document.body.appendChild(toast);
+    }
+    
+    toast.innerHTML = `<i class="fa-solid fa-circle-check"></i> ${message}`;
+    toast.classList.add('show');
+    
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 3000);
 }
 
 // Function to save a product for later
@@ -209,7 +231,7 @@ function getSampleProducts() {
             id: 1,
             title: "New Apple MacBook Pro with Apple M1 Chip (13-inch, 8GB RAM, 256GB SSD)",
             price: 1299.99,
-            image: "img/box1.png",
+            image: "img/box6.png", // Changed from box1.png (gaming) to box6.png (laptop placeholder)
             rating: 5,
             ratingCount: 1423,
             isPrime: true,

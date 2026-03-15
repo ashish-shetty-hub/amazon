@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Function to update cart count in the header
+// Function to update cart count adding total quantity
 function updateCartCount() {
     const cartCount = document.querySelector('.cart-number');
     if (!cartCount) return;
@@ -30,8 +30,11 @@ function updateCartCount() {
     // Get cart items from localStorage
     let cart = JSON.parse(localStorage.getItem('amazonCart')) || [];
     
+    // Calculate total quantity across all items
+    const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+    
     // Update the cart count display
-    cartCount.textContent = cart.length;
+    cartCount.textContent = totalQuantity;
 }
 
 // Function to load cart items
