@@ -55,9 +55,12 @@ function loadProducts(sortOption = 'Sort by: Featured') {
     // Clear existing products
     productGrid.innerHTML = '';
     
-    // In a real application, this would fetch products from a server
-    // For this demo, we'll use sample product data
+    // For this demo, we'll use sample product data combined with user listings
     let products = getSampleProducts();
+    
+    // Add user-added listings from the "Sell" page
+    const userListings = JSON.parse(localStorage.getItem('amazon_mock_listings')) || [];
+    products = [...userListings, ...products];
     
     // Apply sorting
     products = sortProducts(products, sortOption);

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell on Amazon: Start Selling Today</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/sell.css">
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border" onclick="window.location.href='index.html'" style="cursor: pointer;">
+                <div class="logo"></div>
+            </div>
+            
+            <div class="nav-search">
+                <input type="text" class="search-input" placeholder="Search for help...">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <div class="nav-signin border" onclick="window.location.href='login.html'">
+                <p><span id="nav-user-hello">Hello, sign in</span></p>
+                <p class="nav-second">Account & Lists</p>
+            </div>
+
+            <div class="nav-cart border" onclick="window.location.href='cart.html'">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p class="cart-text">Cart</p>
+                <p class="cart-number">0</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="sell-main">
+        <section class="sell-hero">
+            <div class="sell-hero-content">
+                <h1>Become an Amazon Seller</h1>
+                <p>Reach millions of customers and grow your business today.</p>
+                <button class="cta-button" onclick="document.getElementById('listing-form').scrollIntoView({behavior: 'smooth'})">Get Started</button>
+            </div>
+        </section>
+
+        <section class="listing-section" id="listing-form">
+            <div class="form-container">
+                <h2>List a New Product</h2>
+                <form id="sell-product-form">
+                    <div class="form-group">
+                        <label for="p-title">Product Title</label>
+                        <input type="text" id="p-title" required placeholder="e.g. Wireless Noise Cancelling Headphones">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="p-price">Price ($)</label>
+                            <input type="number" id="p-price" step="0.01" required placeholder="0.00">
+                        </div>
+                        <div class="form-group">
+                            <label for="p-category">Category</label>
+                            <select id="p-category" required>
+                                <option value="electronics">Electronics</option>
+                                <option value="home">Home & Kitchen</option>
+                                <option value="fashion">Fashion</option>
+                                <option value="toys">Toys & Games</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="p-image">Product Image URL</label>
+                        <input type="text" id="p-image" placeholder="Paste an image URL or leave blank for a placeholder">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="p-desc">Product Description</label>
+                        <textarea id="p-desc" rows="4" placeholder="Tell customers about your product..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-listing-btn">List Product</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="benefits-section">
+            <div class="benefit-card">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h3>Fast Fulfillment</h3>
+                <p>Let Amazon handle shipping, returns, and customer service.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fa-solid fa-globe"></i>
+                <h3>Global Reach</h3>
+                <p>Sell to hundreds of millions of customers around the world.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Secure Payments</h3>
+                <p>Get paid directly and securely with Amazon's payment system.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-panel1" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            Back to top
+        </div>
+        <div class="footer-panel4">
+            <div class="copyright-text">© 1996-2023, Amazon.com, Inc. or its affiliates</div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/sell.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+/* Sell Page Styles */
+.sell-main {
+    background-color: var(--amazon-bg);
+    min-height: 100vh;
+}
+
+.sell-hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.sell-hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.sell-hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: var(--amazon-orange);
+    color: #111;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: var(--amazon-orange-dark);
+    transform: scale(1.05);
+}
+
+.listing-section {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: -100px auto 40px;
+}
+
+.form-container {
+    background-color: var(--card-white);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: var(--text-main);
+    border-bottom: 2px solid var(--amazon-orange);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--amazon-orange);
+    box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.2);
+}
+
+.submit-listing-btn {
+    width: 100%;
+    background: linear-gradient(to bottom, var(--amazon-orange), var(--amazon-orange-dark));
+    border: 1px solid #a88734;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: filter var(--transition-speed);
+}
+
+.submit-listing-btn:hover {
+    filter: brightness(0.95);
+}
+
+.benefits-section {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    gap: 30px;
+    padding: 0 20px 60px;
+}
+
+.benefit-card {
+    flex: 1;
+    background-color: var(--card-white);
+    padding: 30px;
+    text-align: center;
+    border-radius: var(--border-radius);
+    transition: transform var(--transition-speed);
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-card i {
+    font-size: 3rem;
+    color: var(--amazon-orange);
+    margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.benefit-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .benefits-section {
+        flex-direction: column;
+    }
+    
+    .sell-hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
