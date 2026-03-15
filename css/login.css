@@ -1,6 +1,6 @@
 /* Login page styles */
 .login-body {
-    background-color: #fff;
+    background-color: var(--card-white);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -8,93 +8,97 @@
 }
 
 .login-container {
-    max-width: 350px;
+    max-width: 380px;
     width: 100%;
-    margin: 20px auto;
+    margin: 40px auto;
     padding: 0 20px;
 }
 
 .login-logo {
     text-align: center;
-    margin: 20px 0;
+    margin-bottom: 25px;
 }
 
 .login-logo img {
-    width: 100px;
+    width: 120px;
     height: auto;
 }
 
 .login-box {
     border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 20px 26px;
-    margin-bottom: 22px;
+    border-radius: var(--border-radius);
+    padding: 30px;
+    margin-bottom: 25px;
+    background-color: var(--card-white);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 .login-box h1 {
-    font-weight: 400;
-    font-size: 28px;
-    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 1.75rem;
+    margin-bottom: 15px;
 }
 
 .form-group {
-    margin-bottom: 14px;
+    margin-bottom: 20px;
 }
 
 .form-group label {
     display: block;
     font-weight: 700;
-    font-size: 13px;
-    margin-bottom: 5px;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
 }
 
 .form-group input {
     width: 100%;
-    height: 31px;
-    padding: 3px 7px;
-    border: 1px solid #a6a6a6;
-    border-radius: 3px;
-    box-shadow: 0 1px 0 rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.07) inset;
+    height: 35px;
+    padding: 5px 10px;
+    border: 1px solid #888;
+    border-radius: 4px;
     outline: 0;
+    transition: box-shadow var(--transition-speed), border-color var(--transition-speed);
 }
 
 .form-group input:focus {
-    border-color: #e77600;
-    box-shadow: 0 0 3px 2px rgba(228,121,17,.5);
+    border-color: var(--amazon-orange-dark);
+    box-shadow: 0 0 4px rgba(228, 121, 17, 0.5);
 }
 
 .forgot-password {
-    font-size: 13px;
-    margin-top: 5px;
+    font-size: 0.8rem;
+    margin-top: 8px;
     display: inline-block;
+    color: var(--amazon-link);
 }
 
 .signin-button, .create-account-button {
     display: block;
     width: 100%;
-    height: 31px;
-    margin-top: 18px;
-    border-radius: 3px;
-    border-style: solid;
-    border-width: 1px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: 1px solid;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: filter var(--transition-speed);
 }
 
 .signin-button {
-    background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
-    border-color: #a88734 #9c7e31 #846a29;
+    background: linear-gradient(to bottom, var(--amazon-orange), var(--amazon-orange-dark));
+    border-color: #a88734;
 }
 
 .signin-button:hover {
-    background: linear-gradient(to bottom,#f5d78e,#eeb933);
+    filter: brightness(0.95);
 }
 
 .divider {
     position: relative;
     text-align: center;
-    margin-top: 25px;
-    margin-bottom: 14px;
+    margin-top: 30px;
+    margin-bottom: 20px;
     height: 1px;
     background-color: #e7e7e7;
 }
@@ -105,36 +109,39 @@
     left: 50%;
     transform: translateX(-50%);
     background-color: #fff;
-    padding: 0 8px;
-    color: #767676;
+    padding: 0 12px;
+    color: var(--text-light);
     font-weight: 400;
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 .create-account-button {
-    background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);
-    border-color: #adb1b8 #a2a6ac #8d9096;
+    background: #fff;
+    border-color: #ddd;
+    color: var(--text-main);
 }
 
 .create-account-button:hover {
-    background: linear-gradient(to bottom,#e7eaf0,#d9dce1);
+    background-color: #f7fafa;
 }
 
 .login-footer {
-    margin-top: 26px;
+    margin-top: 30px;
     text-align: center;
 }
 
 .footer-links {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 .footer-links a {
-    margin: 0 5px;
-    font-size: 12px;
+    margin: 0 10px;
+    font-size: 0.75rem;
+    color: var(--amazon-link);
 }
 
 .copyright {
-    font-size: 11px;
-    color: #555;
-} 
+    font-size: 0.7rem;
+    color: var(--text-light);
+}
+ 
