@@ -90,7 +90,7 @@ function createProductCard(product) {
     
     card.innerHTML = `
         <div class="product-image">
-            <img src="${product.image}" alt="${product.title}" onerror="this.src='img/box1.jpg'">
+            <img src="${product.image}" alt="${product.title}" onerror="this.src='img/box1.png'">
         </div>
         <div class="product-title">${product.title}</div>
         <div class="product-rating">
@@ -206,7 +206,7 @@ function getSampleProducts() {
             id: 1,
             title: "New Apple MacBook Pro with Apple M1 Chip (13-inch, 8GB RAM, 256GB SSD)",
             price: 1299.99,
-            image: "img/box1.jpg",
+            image: "img/box1.png",
             rating: 5,
             ratingCount: 1423,
             isPrime: true,
@@ -217,7 +217,7 @@ function getSampleProducts() {
             id: 2,
             title: "Apple AirPods Pro Wireless Earbuds with MagSafe Charging Case",
             price: 249.99,
-            image: "img/box2.jpg",
+            image: "img/box2.png",
             rating: 4,
             ratingCount: 5297,
             isPrime: true,
@@ -228,7 +228,7 @@ function getSampleProducts() {
             id: 3,
             title: "Samsung Galaxy S21 Ultra 5G Factory Unlocked Android Cell Phone 128GB",
             price: 999.99,
-            image: "img/box3.jpg",
+            image: "img/box3.png",
             rating: 4,
             ratingCount: 3521,
             isPrime: true,
@@ -239,7 +239,7 @@ function getSampleProducts() {
             id: 4,
             title: "Sony X80J 65 Inch TV: 4K Ultra HD LED Smart Google TV",
             price: 799.99,
-            image: "img/box4.jpg",
+            image: "img/box4.png",
             rating: 5,
             ratingCount: 1892,
             isPrime: true,
@@ -250,7 +250,7 @@ function getSampleProducts() {
             id: 5,
             title: "Canon EOS R5 Full-Frame Mirrorless Camera",
             price: 3899.99,
-            image: "img/box5.jpg",
+            image: "img/box5.png",
             rating: 5,
             ratingCount: 876,
             isPrime: true,
@@ -261,7 +261,7 @@ function getSampleProducts() {
             id: 6,
             title: "Dell XPS 13 Laptop - 13.4-inch 4K UHD+ Touch Display",
             price: 1499.99,
-            image: "img/box6.jpg",
+            image: "img/box6.png",
             rating: 4,
             ratingCount: 2345,
             isPrime: true,
@@ -272,7 +272,7 @@ function getSampleProducts() {
             id: 7,
             title: "Bose QuietComfort 45 Bluetooth Wireless Noise Cancelling Headphones",
             price: 329.99,
-            image: "img/box7.jpg",
+            image: "img/box7.png",
             rating: 4,
             ratingCount: 4321,
             isPrime: true,
@@ -283,7 +283,7 @@ function getSampleProducts() {
             id: 8,
             title: "LG OLED C1 Series 65-Inch Class 4K Smart TV",
             price: 1799.99,
-            image: "img/box8.jpg",
+            image: "img/box8.png",
             rating: 5,
             ratingCount: 1567,
             isPrime: true,
